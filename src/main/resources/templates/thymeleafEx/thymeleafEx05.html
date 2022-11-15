@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <h1>Thymeleaf 링크처리 예제 페이지</h1>
+  <div>
+    <!-- "th:href=@{이동할경로}", 스프링 부트에서는 애플리케이션의 루트가 "/"이다.  -->
+    <a th:href="@{/thymeleaf/ex01}">예제1 페이지 이동</a>
+  </div>
+  <div>
+    <!-- 애플리케이션 외부의 사이트에 접근하는 절대 경로 입력 -->
+    <a th:href="@{http://www.thymeleaf.org}">thymeleaf 공식 페이지 이동</a>
+  </div>
+  <div>
+    <!-- th:href 를 이용한 파라미터 데이터 전달용 -->
+    <a th:href="@{/thymeleaf/ex06(param1 = '파라미터 데이터1',
+    param2 = '파라미터 데이터2')}">thymeleaf 파라미터 전달</a>
+  </div>
+</body>
+</html>

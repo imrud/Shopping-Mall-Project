@@ -34,6 +34,7 @@ public class MemberService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+
         Member member = memberRepository.findByEmail(email);
 
         if(member == null){
@@ -41,7 +42,7 @@ public class MemberService implements UserDetailsService {
         }
 
         return User.builder()
-                .username(member.getName())
+                .username(member.getEmail())
                 .password(member.getPassword())
                 .roles(member.getRole().toString())
                 .build();

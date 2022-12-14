@@ -26,7 +26,7 @@ import static com.shop.entity.QItem.item;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-@TestPropertySource(locations="classpath:application-test.properties")
+@TestPropertySource(locations = "classpath:application-test.properties")
 class ItemRepositoryTest {
 
     @PersistenceContext
